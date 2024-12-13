@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 20%;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+        }
+
+        .sidebar h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #e94e77;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .sidebar ul li a:hover {
+            color: #e94e77;
+        }
+
+        /* Main Content */
+        .main {
+            margin-left: 20%;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .profile h2 {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+
+        .profile p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .profile .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .profile .social-icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .profile .social-icons a:hover {
+            color: #e94e77;
+        }
+
+        .profile button {
+            background-color: #e94e77;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .profile button:hover {
+            background-color: #d43767;
+        }
+
+        /* Background patterns */
+        .patterns {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .patterns span {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgba(233, 78, 119, 0.2);
+        }
+
+        .patterns span:nth-child(1) {
+            top: 10%;
+            left: 20%;
+        }
+
+        .patterns span:nth-child(2) {
+            top: 50%;
+            left: 70%;
+        }
+
+        .patterns span:nth-child(3) {
+            top: 80%;
+            left: 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Yesid.</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="profile">
+            <img src="https://via.placeholder.com/100" alt="Profile Picture">
+            <h2>Yesid Rivera</h2>
+            <p>I'm a Django Developer</p>
+            <div class="social-icons">
+                <a href="#">🐦</a>
+                <a href="#">🔗</a>
+                <a href="#">🌐</a>
+            </div>
+            <button>Hire Me</button>
+        </div>
+        <div class="patterns">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>
+
