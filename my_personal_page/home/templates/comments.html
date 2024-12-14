@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 20%;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+        }
+
+        .sidebar h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #e94e77;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .sidebar ul li a:hover {
+            color: #e94e77;
+        }
+
+        /* Main Content */
+        .main {
+            margin-left: 20%;
+            padding: 40px;
+            padding-left: 80px;
+            flex-grow: 1;
+        }
+
+        h1 {
+            color: #e94e77;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .comment-section {
+            width: 70%;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin-right: 800px;
+        }
+
+        .comment {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+
+        .comment:last-child {
+            border-bottom: none;
+        }
+
+        .comment h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #e94e77;
+        }
+
+        .comment p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .comment-form {
+            margin-top: 30px;
+        }
+
+        .comment-form input, 
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .comment-form button {
+            background-color: #e94e77;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .comment-form button:hover {
+            background-color: #d43c68;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Yesid.</h1>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/experience">Experience</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="/comments">Comments</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <h1>Comment Section</h1>
+        <div class="comment-section">
+            <ul>
+                {% for x in mycomments %}
+                <li class="comment">
+                    <h3>{{ x.userName }}</h3>
+                    <p>{{ x.comment }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+            <!--
+            <div class="comment-form">
+                <h2>Leave a Comment</h2>
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <input type="text" name="userName" placeholder="Your Name" required>
+                    <textarea name="comment" placeholder="Your Comment" rows="4" required></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+            -->
+        </div>
+    </div>
+</body>
+</html>

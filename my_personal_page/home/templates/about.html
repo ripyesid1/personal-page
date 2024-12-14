@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 20%;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+        }
+
+        .sidebar h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #e94e77;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .sidebar ul li a:hover {
+            color: #e94e77;
+        }
+
+        /* Main Content */
+        .main {
+            margin-left: 20%;
+            padding: 40px;
+            flex-grow: 1;
+            padding-left: 80px;
+        }
+
+        .main h2 {
+            font-size: 28px;
+            color: #e94e77;
+            margin-bottom: 20px;
+        }
+
+        .main p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .main .skills {
+            margin-top: 30px;
+        }
+
+        .main .skills h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .main .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .main .skills ul li {
+            margin: 5px 0;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Yesid.</h1>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/experience">Experience</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="/comments">Comments</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <h2>About Me</h2>
+        <p>Hello! I'm Yesid Rivera, a passionate front-end developer with a knack for creating interactive and visually appealing web experiences. With a strong foundation in HTML, CSS, and JavaScript, I thrive on turning design ideas into functional, user-friendly interfaces. My goal is to bring creativity and technical expertise together to deliver outstanding projects.</p>
+
+        <p>When I'm not coding, I enjoy exploring new design trends, learning about emerging web technologies, and experimenting with creative ideas to make the web a better place.</p>
+
+        <div class="skills">
+            <h3>My Skills</h3>
+            <ul>
+                <li>HTML5, CSS3, and JavaScript</li>
+                <li>Responsive Web Design</li>
+                <li>Front-End Frameworks (React, Vue.js)</li>
+                <li>Version Control (Git)</li>
+                <li>UI/UX Principles</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

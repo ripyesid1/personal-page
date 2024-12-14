@@ -7,3 +7,7 @@ class User(models.Model):
     firstName = models.CharField(max_length = 255)
     lastName = models.CharField(max_length = 255)
     password = models.CharField(max_length = 100)
+
+class Comment(models.Model):
+    userName = models.CharField(max_length=255)
+    comment = models.CharField(max_length=1000)
