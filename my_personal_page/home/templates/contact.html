@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comments - Portfolio</title>
+    <title>Contact - Portfolio</title>
     <style>
         body {
             margin: 0;
@@ -16,7 +16,7 @@
         /* Sidebar */
         .sidebar {
             width: 20%;
-            background-color: #fff;
+            background-color: #ffffff; 
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
@@ -50,79 +50,61 @@
             color: #e94e77;
         }
 
-        /* Main Content */
-        .main {
+        .content {
+            flex: 1;
             margin-left: 20%;
-            padding: 40px;
-            padding-left: 80px;
-            flex-grow: 1;
+            padding: 20px;
         }
 
-        h1 {
-            color: #e94e77;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .comment-section {
-            width: 70%;
-            max-width: 800px;
-            background-color: #fff;
+        .contact-form {
+            background-color: #3a3a3a;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            padding: 20px;
-            margin-right: 800px;
+            padding: 5%;
+            padding-right: 65px;
+            max-width: 600px;
+            margin: auto;
         }
 
-        .comment {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 15px;
-        }
-
-        .comment:last-child {
-            border-bottom: none;
-        }
-
-        .comment h3 {
-            margin: 0;
-            font-size: 18px;
+        .contact-form h1 {
+            font-size: 24px;
             color: #e94e77;
+            margin-bottom: 20px;
         }
 
-        .comment p {
-            margin: 5px 0 0;
+        .contact-form label {
+            display: block;
             font-size: 14px;
-            color: #555;
+            color: #ffffff;
+            margin-bottom: 5px;
         }
 
-        .comment-form {
-            margin-top: 30px;
-        }
-
-        .comment-form input, 
-        .comment-form textarea {
+        .contact-form input,
+        .contact-form textarea {
             width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
+            padding-right: -5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 14px;
         }
 
-        .comment-form button {
+        .contact-form button {
             background-color: #e94e77;
             color: #fff;
             border: none;
-            padding: 10px 15px;
+            padding: 10px 20px;
             border-radius: 4px;
-            cursor: pointer;
             font-size: 16px;
+            cursor: pointer;
         }
 
-        .comment-form button:hover {
-            background-color: #d43c68;
+        .contact-form button:hover {
+            background-color: #d43b67;
         }
+
+
     </style>
 </head>
 <body>
@@ -139,28 +121,21 @@
             <li><a href="/home/comments">Comments</a></li>
         </ul>
     </div>
-    <div class="main">
-        <h1>Comment Section</h1>
-        <div class="comment-section">
-            <ul>
-                {% for x in mycomments %}
-                <li class="comment">
-                    <h3>{{ x.userName }}</h3>
-                    <p>{{ x.comment }}</p>
-                </li>
-                {% endfor %}
-            </ul>
-            <!--
-            <div class="comment-form">
-                <h2>Leave a Comment</h2>
-                <form method="POST" action="">
-                    {% csrf_token %}
-                    <input type="text" name="userName" placeholder="Your Name" required>
-                    <textarea name="comment" placeholder="Your Comment" rows="4" required></textarea>
-                    <button type="submit">Post Comment</button>
-                </form>
-            </div>
-            -->
+    <div class="content">
+        <div class="contact-form">
+            <h1>Contact Me</h1>
+            <form action="/submit-contact" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </div>
 </body>

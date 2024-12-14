@@ -26,3 +26,15 @@ def comments(request):
         'mycomments' : mycomments,
     }
     return HttpResponse(template.render(context, request))
+
+def works(request):
+    template = loader.get_template('works.html')
+    return HttpResponse(template.render())
+
+def blog(request):
+    template = loader.get_template('blog.html')
+    return HttpResponse(template.render())
+
+def contact(request):
+    template = loader.get_template('contact.html')
+    return HttpResponse(template.render())
