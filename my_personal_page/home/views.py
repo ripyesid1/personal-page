@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from .models import Comment
-from .models import Blog_Post
+from .models import Comment, project, Blog_Post
 
 def home_page(request):
     template = loader.get_template('home_page.html')
@@ -29,8 +28,12 @@ def comments(request):
     return HttpResponse(template.render(context, request))
 
 def works(request):
+    myprojects = project.objects.all().values()
     template = loader.get_template('works.html')
-    return HttpResponse(template.render())
+    context = {
+        'myprojects' : myprojects,
+    }
+    return HttpResponse(template.render(context, request))
 
 def blog(request):
     myposts = Blog_Post.objects.all().values()

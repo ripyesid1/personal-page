@@ -18,3 +18,12 @@ class Blog_Post(models.Model):
     date = models.DateField()
     postBody = models.CharField(max_length=10000)
     summary = models.CharField(max_length=200)
+
+class project(models.Model):
+    projectName = models.CharField(max_length=255)
+    author = models.CharField(max_length=255)
+    languages = models.CharField(max_length=120)
+    summary = models.CharField(max_length=500)
+    description = models.CharField(max_length=10000)
+    githubLink = models.URLField(max_length=128)
+

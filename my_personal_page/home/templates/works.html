@@ -68,7 +68,7 @@
         }
 
         .work-item {
-            background-color: #fff;
+            background-color: #333;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             overflow: hidden;
@@ -93,7 +93,7 @@
 
         .work-item p {
             font-size: 14px;
-            color: #555;
+            color: #ffffff;
             margin: 0 15px 15px 15px;
         }
 
@@ -135,24 +135,14 @@
     <div class="content">
         <h1 id="main_header">My Works</h1>
         <div class="works-section">
-            <div class="work-item">
-                <img src="work1.jpg" alt="Work 1">
-                <h3>Project Title 1</h3>
-                <p>Brief description of the project goes here. Highlight the key points and purpose.</p>
-                <a href="#">View Details</a>
-            </div>
-            <div class="work-item">
-                <img src="work2.jpg" alt="Work 2">
-                <h3>Project Title 2</h3>
-                <p>Brief description of the project goes here. Highlight the key points and purpose.</p>
-                <a href="#">View Details</a>
-            </div>
-            <div class="work-item">
-                <img src="work3.jpg" alt="Work 3">
-                <h3>Project Title 3</h3>
-                <p>Brief description of the project goes here. Highlight the key points and purpose.</p>
-                <a href="#">View Details</a>
-            </div>
+            {% for project in myprojects %}    
+                <div class="work-item">
+                    <img src="work1.jpg" alt="Work 1">
+                    <h3>{{project.projectName}}</h3>
+                    <p>{{project.summary}}</p>
+                    <a href="#">View Details</a>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </body>
