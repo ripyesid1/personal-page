@@ -11,3 +11,10 @@ class User(models.Model):
 class Comment(models.Model):
     userName = models.CharField(max_length=255)
     comment = models.CharField(max_length=1000)
+
+class Blog_Post(models.Model):
+    title = models.CharField(max_length=400)
+    author = models.CharField(max_length=510)
+    date = models.DateField()
+    postBody = models.CharField(max_length=10000)
+    summary = models.CharField(max_length=200)

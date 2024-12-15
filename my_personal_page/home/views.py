@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from .models import Comment
+from .models import Blog_Post
 
 def home_page(request):
     template = loader.get_template('home_page.html')
@@ -32,9 +33,21 @@ def works(request):
     return HttpResponse(template.render())
 
 def blog(request):
+    myposts = Blog_Post.objects.all().values()
     template = loader.get_template('blog.html')
-    return HttpResponse(template.render())
+    context = {
+        'myposts' : myposts,
+    }
+    return HttpResponse(template.render(context, request))
 
 def contact(request):
     template = loader.get_template('contact.html')
     return HttpResponse(template.render())
+
+def blog_post(request, id):
+    mypost = Blog_Post.objects.get(id=id)
+    template = loader.get_template('blog_post.html')
+    context = {
+        'mypost' : mypost,
+    }
+    return HttpResponse(template.render(context, request))
