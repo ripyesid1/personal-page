@@ -1,55 +1,13 @@
+{% extends "base.html" %}
+{% block title %}About - Portfolio{% endblock %}
+
+{%block content%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Portfolio</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            display: flex;
-            height: 100vh;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: 20%;
-            background-color: #fff;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            position: fixed;
-            height: 100%;
-        }
-
-        .sidebar h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #e94e77;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            margin: 15px 0;
-        }
-
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-        }
-
-        .sidebar ul li a:hover {
-            color: #e94e77;
-        }
 
         /* Main Content */
         .main {
@@ -104,19 +62,7 @@
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h1>Yesid.</h1>
-        <ul>
-            <li><a href="/home">Home</a></li>
-            <li><a href="/home/about" id="current">About</a></li>
-            <li><a href="/home/services">Services</a></li>
-            <li><a href="/home/experience">Experience</a></li>
-            <li><a href="/home/works">Works</a></li>
-            <li><a href="/home/blog">Blog</a></li>
-            <li><a href="/home/contact">Contact</a></li>
-            <li><a href="/home/comments">Comments</a></li>
-        </ul>
-    </div>
+    
     <div class="main">
         <h2>About Me</h2>
         <p>Hello! I'm Yesid Rivera, a passionate front-end developer with a knack for creating interactive and visually appealing web experiences. With a strong foundation in HTML, CSS, and JavaScript, I thrive on turning design ideas into functional, user-friendly interfaces. My goal is to bring creativity and technical expertise together to deliver outstanding projects.</p>
@@ -136,3 +82,4 @@
     </div>
 </body>
 </html>
+{% endblock %}
