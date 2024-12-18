@@ -54,3 +54,11 @@ def blog_post(request, id):
         'mypost' : mypost,
     }
     return HttpResponse(template.render(context, request))
+
+def Project(request, id):
+    myproject = project.objects.get(id=id)
+    template = loader.get_template('project.html')
+    context = {
+        'myproject' : myproject,
+    }
+    return HttpResponse(template.render(context, request))
