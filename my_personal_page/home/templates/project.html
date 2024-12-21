@@ -1,55 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Project {{myproject.id}} - Portfolio{% endblock %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project {{myproject.id}} - Portfolio</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            display: flex;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: 20%;
-            background-color: #fff;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            position: fixed;
-            height: 100%;
-        }
-
-        .sidebar h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #e94e77;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            margin: 15px 0;
-        }
-
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-        }
-
-        .sidebar ul li a:hover {
-            color: #e94e77;
-        }
-
         .content {
             flex: 1;
             margin-left: 20%;
@@ -120,19 +77,6 @@
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h1>Yesid.</h1>
-        <ul>
-            <li><a href="/home">Home</a></li>
-            <li><a href="/home/about">About</a></li>
-            <li><a href="/home/services">Services</a></li>
-            <li><a href="/home/experience">Experience</a></li>
-            <li><a href="/home/works"  id="current">Works</a></li>
-            <li><a href="/home/blog">Blog</a></li>
-            <li><a href="/home/contact">Contact</a></li>
-            <li><a href="/home/comments">Comments</a></li>
-        </ul>
-    </div>
     <div class="content">
         <div class="project-header">
             <h1>{{myproject.projectName}}</h1>
@@ -152,3 +96,4 @@
     </div>
 </body>
 </html>
+{% endblock %}

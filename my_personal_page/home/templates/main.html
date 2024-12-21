@@ -1,0 +1,131 @@
+{% extends "base_template.html" %}
+{% block title %}Main page{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page - Portfolio</title>
+    <style>
+        /* Main Content */
+        .content {
+            flex: 1;
+            margin-left: 20%;
+            padding: 20px;
+        }
+
+        .hero {
+            background-color: #e94e77;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin: 0 0 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 0 0 20px;
+        }
+
+        .hero a {
+            background-color: #fff;
+            color: #e94e77;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .hero a:hover {
+            background-color: #f4f4f4;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .feature {
+            flex: 1;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .feature h2 {
+            color: #e94e77;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .feature a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #e94e77;
+            font-weight: bold;
+        }
+
+        .feature a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <div class="hero">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore my projects, read my blog, and learn more about me!</p>
+            <a href="home/works">Explore My Work</a>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h2>About Me</h2>
+                <p>Learn more about my journey and professional background.</p>
+                <a href="home/about">Read More</a>
+            </div>
+            <div class="feature">
+                <h2>Blog</h2>
+                <p>Check out my latest thoughts and updates.</p>
+                <a href="home/blog">Visit Blog</a>
+            </div>
+            <div class="feature">
+                <h2>Contact</h2>
+                <p>Get in touch with me for collaborations or inquiries.</p>
+                <a href="home/contact">Contact Me</a>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2024 Yesid Rivera. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
+
+{% endblock %}

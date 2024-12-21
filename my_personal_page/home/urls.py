@@ -12,4 +12,5 @@ urlpatterns = [
     path('home/comments/', views.comments, name='comments'),
     path('home/blog/<int:id>', views.blog_post, name='blog'),
     path('home/works/<int:id>', views.Project, name='project'),
+    path('', views.home_page, name='mainPage'),
 ]

@@ -62,3 +62,7 @@ def Project(request, id):
         'myproject' : myproject,
     }
     return HttpResponse(template.render(context, request))
+
+def mainPage(request):
+    template = loader.get_template('main.html')
+    return HttpResponse(template.render())
